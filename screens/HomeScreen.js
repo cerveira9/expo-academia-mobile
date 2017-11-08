@@ -6,6 +6,7 @@ import LoginForm from "../components/LoginForm";
 import Button from "../components/common/Button";
 import CardSection from "../components/common/CardSection";
 import Spinner from "../components/common/Spinner";
+import HomeForm from "../components/HomeForm";
 
 export default class HomeScreen extends Component {
   state = { loggedIn: false };
@@ -36,11 +37,14 @@ export default class HomeScreen extends Component {
     switch (this.state.loggedIn) {
       case true:
         return (
-          <CardSection>
-            <Button onPress={() => firebase.auth().signOut()}>
-              Log Out
-            </Button>
-          </CardSection>
+          <View>
+              <HomeForm />
+            <CardSection>
+              <Button onPress={() => firebase.auth().signOut()}>
+                Log Out
+              </Button>
+            </CardSection>
+          </View>
         );
       case false:
         return <LoginForm />;
@@ -52,7 +56,7 @@ export default class HomeScreen extends Component {
   render() {
     return (
       <View>
-        <Header headerText="Academia" />
+        <Header headerText="Home" />
           {this.renderContent()}
       </View>
     );
