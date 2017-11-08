@@ -5,11 +5,13 @@ import CardSection from "../components/common/CardSection";
 
 const HomeForm = () => {
     return(
-        <View style={styles.viewStyle}>
-            <Image
-                style={styles.imageStyle} 
-                source={require('../assets/images/EASY_GYM.png')} 
-            />
+        <View>
+            <View style={styles.viewStyle}>
+                <Image
+                    style={styles.imageStyle} 
+                    source={require('../assets/images/EASY_GYM.png')} 
+                />
+            </View>
             <CardSection>
                 <Button style={styles.buttonStyle}>Treinos</Button>
             </CardSection>
