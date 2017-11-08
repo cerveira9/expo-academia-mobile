@@ -21,8 +21,8 @@ const HomeForm = () => {
 
 const styles = {
     imageStyle: {
-       height: 300,
-       width: 300
+       height: 310,
+       width: 310
     },
     viewStyle: {
         backgroundColor: "#FFF",
